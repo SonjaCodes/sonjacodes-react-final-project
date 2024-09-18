@@ -1,11 +1,28 @@
-import './App.css';
+import "./App.css";
+import Weather from "./Weather";
+import Footer from "./Footer";
+import Container from "react-bootstrap/Container";
 
 export default function App() {
   return (
     <div className="App">
-
-      <h1>Hello CodeSandbox</h1>
+      <div className="container">
+        <Container className="App-Container">
+          <header className="App-header">
+            <img
+              src="SonjaCodes Logo.png"
+              className="SonjaCodes-logo"
+              alt="logo"
+            />
+          </header>
+          <main>
+            <Weather defaultCity="Zurich" />
+          </main>
+        </Container>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </div>
   );
 }
-
