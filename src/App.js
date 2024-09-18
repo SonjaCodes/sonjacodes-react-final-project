@@ -1,7 +1,7 @@
 import "./App.css";
 import Weather from "./Weather";
 import Footer from "./Footer";
-import Container from "react-bootstrap/Container";
+import { Container } from "react-bootstrap";
 
 export default function App() {
   return (
