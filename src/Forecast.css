@@ -1,0 +1,31 @@
+.Forecast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.day {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 20px;
+  margin: 10px 0;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.forecastIcon {
+  height: 88px;
+}
+
+.forecast-temperature {
+  color: var(--sonjacodes-brand-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.forecast-temperature .forecast-min {
+  color: var(--sonjacodes-brand-color-secondary);
+  margin-left: 10px;
+}
