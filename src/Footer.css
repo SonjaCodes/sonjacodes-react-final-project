@@ -1,10 +1,10 @@
-.footer {
+.Footer {
   color: var(--sonjacodes-brand-color-secondary);
   font-size: 12px;
   margin: 20px 0;
   text-align: center;
 }
 
-.footer a {
+.Footer a {
   color: var(--sonjacodes-brand-color)
 }
