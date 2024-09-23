@@ -10,12 +10,12 @@ export default function Weather(props) {
   const [weatherOutput, setWeatherOutput] = useState({ ready: false });
 
   function displayWeatherOutput(response) {
-    const date = DateTime.utc().plus({ hours: response.data.timezone / 3600 }).toFormat("cccc, dd LLL yyyy 'at' HH:mm");
-
     setWeatherOutput({
       city: response.data.name,
       coordinates: response.data.coord,
-      date: date,
+      date: DateTime.utc()
+        .plus({ hours: response.data.timezone / 3600 })
+        .toFormat("cccc, dd LLL yyyy 'at' HH:mm"),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
