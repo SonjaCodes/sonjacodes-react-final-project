@@ -8,11 +8,10 @@ import { DateTime } from "luxon";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherOutput, setWeatherOutput] = useState({ ready: false });
-  const date = DateTime.now().toLocaleString(
-    DateTime.DATETIME_MED_WITH_WEEKDAY
-  );
 
   function displayWeatherOutput(response) {
+    const date = DateTime.utc().plus({ hours: response.data.timezone / 3600 }).toFormat("cccc, dd LLL yyyy 'at' HH:mm");
+
     setWeatherOutput({
       city: response.data.name,
       coordinates: response.data.coord,
