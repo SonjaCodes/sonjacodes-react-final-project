@@ -24,7 +24,11 @@ export default function Forecast(props) {
             if (index < 5) {
               return (
                 <div className="col">
-                  <ForecastDay data={day} />
+                  <ForecastDay
+                    data={day}
+                    unit={props.unit}
+                    handleToggle={props.handleToggle}
+                  />
                 </div>
               );
             } else {

@@ -8,6 +8,10 @@ import { DateTime } from "luxon";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherOutput, setWeatherOutput] = useState({ ready: false });
+  const [unit, setUnit] = useState("celsius");
+  const handleToggle = () => {
+    setUnit(unit === "celsius" ? "fahrenheit" : "celsius");
+  };
 
   function displayWeatherOutput(response) {
     setWeatherOutput({
@@ -53,9 +57,17 @@ export default function Weather(props) {
           />
           <input className="search-button" type="submit" value="Search" />
         </form>
-        <WeatherDetails data={weatherOutput} />
+        <WeatherDetails
+          data={weatherOutput}
+          unit={unit}
+          handleToggle={handleToggle}
+        />
         <hr />
-        <Forecast coordinates={weatherOutput.coordinates} />
+        <Forecast
+          coordinates={weatherOutput.coordinates}
+          unit={unit}
+          handleToggle={handleToggle}
+        />
       </div>
     );
   } else {

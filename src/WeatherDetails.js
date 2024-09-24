@@ -2,18 +2,17 @@ import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import Toggle from "./Toggle";
-import { useState } from "react";
 
 export default function WeatherDetails(props) {
-  const [unit, setUnit] = useState("celsius");
-  const handleToggle = () => {
-    setUnit(unit === "celsius" ? "fahrenheit" : "celsius");
-  };
+
 
   return (
     <div className="WeatherDetailsContainer">
       <div className="toggleBox">
-        <Toggle toggle={unit === "celsius"} handleToggle={handleToggle} />
+        <Toggle
+          toggle={props.unit === "celsius"}
+          handleToggle={props.handleToggle}
+        />
       </div>
       <div className="WeatherDetails" class="row d-flex align-items-center">
         <div className="col-6">
@@ -39,7 +38,7 @@ export default function WeatherDetails(props) {
               <WeatherIcon code={props.data.icon} size={44} />
             </div>
 
-            <WeatherTemperature celsius={props.data.temperature} unit={unit} />
+            <WeatherTemperature celsius={props.data.temperature} unit={props.unit} />
           </div>
         </div>
       </div>

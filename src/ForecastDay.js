@@ -17,14 +17,20 @@ export default function ForecastDay(props) {
     return days[day];
   }
 
-  function maxTemperature() {
-    const temperature = Math.round(props.data.temp.max);
-    return `${temperature}°`;
+  function maxTemperature(unit) {
+    let temperature = Math.round(props.data.temp.max);
+    if (unit === "fahrenheit") {
+      temperature = Math.round(temperature * (9 / 5) + 32);
+    }
+    return `${temperature}°${unit === "celsius" ? "C" : "F"}`;
   }
 
-  function minTemperature() {
-    const temperature = Math.round(props.data.temp.min);
-    return `${temperature}°`;
+  function minTemperature(unit) {
+    let temperature = Math.round(props.data.temp.min);
+    if (unit === "fahrenheit") {
+      temperature = Math.round(temperature * (9 / 5) + 32);
+    }
+    return `${temperature}°${unit === "celsius" ? "C" : "F"}`;
   }
 
   return (
@@ -34,8 +40,8 @@ export default function ForecastDay(props) {
         <WeatherIcon code={props.data.weather[0].icon} size={38} />
       </div>
       <div className="forecast-temperature">
-        <span className="forecast-max">{maxTemperature()}</span>
-        <span className="forecast-min">{minTemperature()}</span>
+        <span className="forecast-max">{maxTemperature(props.unit)}</span>
+        <span className="forecast-min">{minTemperature(props.unit)}</span>
       </div>
     </div>
   );
