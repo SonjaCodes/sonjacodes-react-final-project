@@ -15,11 +15,12 @@
 }
 
 .ForecastDayContainer:hover {
-  background-color: #f9f1f5;
+  background-color: #ededed;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transform: scale(1.5);
-
+  transition: all 0.2s ease-in-out;
 }
 
 .forecastIcon {

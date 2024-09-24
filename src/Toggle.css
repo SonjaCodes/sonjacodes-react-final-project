@@ -1,0 +1,32 @@
+.toggleContainer {
+  background-color: var(--sonjacodes-brand-color-secondary);
+  border-radius: 30px;
+  cursor: pointer;
+  height: 30px;
+  padding: 2px;
+  position: relative;
+  user-select: none;
+  width: 60px;
+}
+
+.toggleBtn {
+  align-items: center;
+  background-color: var(--sonjacodes-brand-color);
+  border-radius: 28px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  height: 26px;
+  justify-content: center;
+  left: 30px;
+  position: absolute;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 28px;
+}
+
+.fahrenheit {
+  background-color: var(--sonjacodes-brand-color);
+  color: #ffffff;
+  left: 2px;
+}
