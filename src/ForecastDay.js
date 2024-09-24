@@ -22,7 +22,7 @@ export default function ForecastDay(props) {
     if (unit === "fahrenheit") {
       temperature = Math.round(temperature * (9 / 5) + 32);
     }
-    return `${temperature}°${unit === "celsius" ? "C" : "F"}`;
+    return `${temperature}°`;
   }
 
   function minTemperature(unit) {
@@ -30,7 +30,7 @@ export default function ForecastDay(props) {
     if (unit === "fahrenheit") {
       temperature = Math.round(temperature * (9 / 5) + 32);
     }
-    return `${temperature}°${unit === "celsius" ? "C" : "F"}`;
+    return `${temperature}°`;
   }
 
   return (
