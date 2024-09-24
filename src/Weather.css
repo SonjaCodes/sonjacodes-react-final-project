@@ -24,6 +24,21 @@
   width: 20%;
 }
 
+.Weather .search-button:hover {
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  animation: slidebg 50s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 200vw;
+  }
+}
+
 .Weather h1 {
   font-size: 38px;
   font-weight: bold;
