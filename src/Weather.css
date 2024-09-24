@@ -63,3 +63,10 @@
 .WeatherTemperature .units a {
   color: var(--sonjacodes-brand-color-secondary);
 }
+
+.toggleBox {
+  display: flex;
+  justify-content: right;
+  margin: 0 auto;
+  text-align: center;
+}

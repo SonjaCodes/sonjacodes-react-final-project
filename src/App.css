@@ -16,13 +16,6 @@
   padding: 50px;
 }
 
-.App .Toggle {
-  display: flex;
-  justify-content: right;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .App .SonjaCodes-logo {
   align-items: center;
   display: block;
