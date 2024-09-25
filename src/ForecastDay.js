@@ -14,6 +14,9 @@ export default function ForecastDay(props) {
       "Friday",
       "Saturday",
     ];
+    if (props.index === 0) {
+      return "Today";
+    }
     return days[day];
   }
 
