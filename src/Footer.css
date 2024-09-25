@@ -8,3 +8,11 @@
 .Footer a {
   color: var(--sonjacodes-brand-color)
 }
+
+.Footer a:hover {
+  background-color: var(--sonjacodes-brand-color-secondary);
+  border-radius: 2px;
+  font-weight: 600;
+  opacity: 1;
+  text-decoration: none;
+}

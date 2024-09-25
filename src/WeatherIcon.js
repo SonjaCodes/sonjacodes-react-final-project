@@ -1,5 +1,5 @@
-import "./Weather.css";
 import { WeatherSvg } from "weather-icons-animated";
+import "./Weather.css";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
@@ -16,7 +16,7 @@ export default function WeatherIcon(props) {
     "10d": { state: "rainy" },
     "10n": { state: "rainy" },
     "11d": { state: "lightning-rainy" },
-    "11n'": { state: "lightning-rainy" },
+    "11n": { state: "lightning-rainy" },
     "13d": { state: "snowy" },
     "13n": { state: "snowy" },
     "50d": { state: "fog" },

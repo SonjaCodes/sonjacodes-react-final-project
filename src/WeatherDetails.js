@@ -1,8 +1,7 @@
-import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import Toggle from "./Toggle";
-
+import "./Weather.css";
 export default function WeatherDetails(props) {
 
 
@@ -37,7 +36,6 @@ export default function WeatherDetails(props) {
             <div className="temperatureIcon">
               <WeatherIcon code={props.data.icon} size={44} />
             </div>
-
             <WeatherTemperature celsius={props.data.temperature} unit={props.unit} />
           </div>
         </div>

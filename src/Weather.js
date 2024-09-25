@@ -1,9 +1,9 @@
-import "./Weather.css";
+import axios from "axios";
 import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
-import axios from "axios";
 import { useState } from "react";
 import { DateTime } from "luxon";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);

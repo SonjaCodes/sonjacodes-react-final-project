@@ -7,7 +7,7 @@ export default function Footer() {
       <a href="https://github.com/SonjaCodes" target="_blank" rel="noreferrer">
         Sonja Kolmer
       </a>
-      . It is open-source on{" "}
+      . It is open-sourced on{" "}
       <a
         href="https://github.com/SonjaCodes/sonjacodes-react-weather-app"
         target="_blank"

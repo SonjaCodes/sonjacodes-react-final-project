@@ -1,5 +1,5 @@
-import "./Forecast.css";
 import WeatherIcon from "./WeatherIcon";
+import "./Forecast.css";
 
 export default function ForecastDay(props) {
   function day() {

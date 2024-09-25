@@ -1,7 +1,7 @@
-import "./Forecast.css";
 import ForecastDay from "./ForecastDay";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useState, useEffect } from "react";
+import "./Forecast.css";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
@@ -26,7 +26,7 @@ export default function Forecast(props) {
                 <div className="col">
                   <ForecastDay
                     data={day}
-                    index={index}
+                    key={index}
                     unit={props.unit}
                     handleToggle={props.handleToggle}
                   />
