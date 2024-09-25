@@ -13,7 +13,7 @@ export default function WeatherDetails(props) {
           handleToggle={props.handleToggle}
         />
       </div>
-      <div className="WeatherDetails" class="row d-flex align-items-center">
+      <div className="WeatherDetails row d-flex align-items-center">
         <div className="col-6">
           <h1>{props.data.city}</h1>
           <ul className="list-unstyled">

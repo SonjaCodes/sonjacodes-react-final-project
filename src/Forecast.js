@@ -26,7 +26,7 @@ export default function Forecast(props) {
                 <div className="col">
                   <ForecastDay
                     data={day}
-                    key={index}
+                    index={index}
                     unit={props.unit}
                     handleToggle={props.handleToggle}
                   />
